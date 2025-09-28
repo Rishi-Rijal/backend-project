@@ -20,34 +20,39 @@
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Rishi-Rijal/02Project.git
+   git clone https://github.com/Rishi-Rijal/02Project.git```
 
 2.Navigate to the project directory:
 cd 02Project
 
 3.Install dependencies:
-npm install
+```bash
+    npm install
+```
 
-Configuration
-Create a .env file in the root directory and add the following environment variables:
+
+#Configuration
+##Create a .env file in the root directory and add the following environment variables:
+```bash
 PORT=3000
 MONGO_URI=your_mongodb_connection_string
 CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
 CLOUDINARY_API_KEY=your_cloudinary_api_key
 CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+```
 
 
-Usage
+#Usage
 1. Start the development server:
-
+```bash
 npm run dev
+```
 
 2. Access the application at http://localhost:3000
 
-Project Structure
-02Project/
+P02Project/
 ├── package.json
-├── [readme.md](http://_vscodecontentref_/1)
+├── readme.md
 ├── public/
 │   └── temp/
 ├── src/
@@ -77,15 +82,18 @@ Project Structure
 │       └── passwordValidator.js
 └── ...
 
-Scripts
+
+#Scripts
+```bash
 npm run dev: Start the development server
 npm start: Start the production server
-Dependencies
+```
+#Dependencies
 Express
 Mongoose
 Multer
 Cloudinary
-Dev Dependencies
+#Dev Dependencies
 Nodemon
-License
+#License
 This project is licensed under the MIT License.
