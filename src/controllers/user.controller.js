@@ -79,6 +79,7 @@ const registerUser = asyncHandler(async (req, res) => {
 })
 
 const loginUser = asyncHandler(async (req, res) => {
+    console.log(req.body);
 
     const { email, username, password } = req.body;
 
@@ -107,7 +108,7 @@ const loginUser = asyncHandler(async (req, res) => {
     }
 
     return res
-        .satus(200)
+        .status(200)
         .cookie("accessToken", accessToken, options)
         .cookie("refreshToken", refreshToken, options)
         .json(
