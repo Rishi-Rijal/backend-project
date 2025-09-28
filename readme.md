@@ -24,37 +24,35 @@
    ```
 
 2. Navigate to the project directory:
- ```bash
-   cd 02Project
-```
+    ```bash
+    cd 02Project
+    ```
 
 3. Install dependencies:
-```bash
-    npm install
-```
+    ```bash
+        npm install
+    ```
 
 
 ## Configuration
 ### Create a .env file in the root directory and add the following environment variables:
-```bash
-PORT=3000
-MONGO_URI=your_mongodb_connection_string
-CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
-CLOUDINARY_API_KEY=your_cloudinary_api_key
-CLOUDINARY_API_SECRET=your_cloudinary_api_secret
-```
+    ```bash
+    PORT=3000
+    MONGO_URI=your_mongodb_connection_string
+    CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+    CLOUDINARY_API_KEY=your_cloudinary_api_key
+    CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+    ```
 
 
 ## Usage
 ### Start the development server:
-```bash
-npm run dev
-```
+    ```bash
+    npm run dev
+    ```
 
 ### Access the application at http://localhost:3000
 <pre>
-   
-
 backend-project/
 ├── package.json
 ├── readme.md
@@ -90,15 +88,15 @@ backend-project/
 
 
 ## Scripts
-```bash
-npm run dev: Start the development server
-npm start: Start the production server
-```
+    ```bash
+    npm run dev: Start the development server
+    npm start: Start the production server
+    ```
 ## Dependencies
-Express
-Mongoose
-Multer
-Cloudinary
+1. Express
+2. Mongoose
+3. Multer
+4. Cloudinary
 
 ## Dev Dependencies
 Nodemon
