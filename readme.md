@@ -20,7 +20,7 @@
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Rishi-Rijal/02Project.git
+   git clone https://github.com/Rishi-Rijal/backend-project.git
    ```
 
 2. Navigate to the project directory:
@@ -36,20 +36,20 @@
 
 ## Configuration
 ### Create a .env file in the root directory and add the following environment variables:
-    ```bash
-    PORT=3000
-    MONGO_URI=your_mongodb_connection_string
-    CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
-    CLOUDINARY_API_KEY=your_cloudinary_api_key
-    CLOUDINARY_API_SECRET=your_cloudinary_api_secret
-    ```
+```bash
+PORT=3000
+MONGO_URI=your_mongodb_connection_string
+CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+CLOUDINARY_API_KEY=your_cloudinary_api_key
+CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+```
 
 
 ## Usage
 ### Start the development server:
-    ```bash
-    npm run dev
-    ```
+```bash
+npm run dev
+```
 
 ### Access the application at http://localhost:3000
 <pre>
@@ -88,10 +88,10 @@ backend-project/
 
 
 ## Scripts
-    ```bash
-    npm run dev: Start the development server
-    npm start: Start the production server
-    ```
+```bash
+npm run dev: Start the development server
+npm start: Start the production server
+```
 ## Dependencies
 1. Express
 2. Mongoose
