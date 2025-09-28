@@ -20,7 +20,8 @@
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Rishi-Rijal/02Project.git```
+   git clone https://github.com/Rishi-Rijal/02Project.git
+   ```
 
 2.Navigate to the project directory:
 cd 02Project
@@ -31,8 +32,8 @@ cd 02Project
 ```
 
 
-#Configuration
-##Create a .env file in the root directory and add the following environment variables:
+## Configuration
+### Create a .env file in the root directory and add the following environment variables:
 ```bash
 PORT=3000
 MONGO_URI=your_mongodb_connection_string
@@ -42,13 +43,13 @@ CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 ```
 
 
-#Usage
-1. Start the development server:
+## Usage
+### Start the development server:
 ```bash
 npm run dev
 ```
 
-2. Access the application at http://localhost:3000
+### Access the application at http://localhost:3000
 
 P02Project/
 ├── package.json
@@ -83,17 +84,19 @@ P02Project/
 └── ...
 
 
-#Scripts
+## Scripts
 ```bash
 npm run dev: Start the development server
 npm start: Start the production server
 ```
-#Dependencies
+## Dependencies
 Express
 Mongoose
 Multer
 Cloudinary
-#Dev Dependencies
+
+## Dev Dependencies
 Nodemon
-#License
+
+## License
 This project is licensed under the MIT License.
