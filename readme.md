@@ -24,7 +24,7 @@
    ```
 
 2. Navigate to the project directory:
-   ```bash
+ ```bash
    cd 02Project
 ```
 
@@ -52,8 +52,10 @@ npm run dev
 ```
 
 ### Access the application at http://localhost:3000
+<pre>
+   
 
-P02Project/
+backend-project/
 ├── package.json
 ├── readme.md
 ├── public/
@@ -84,6 +86,7 @@ P02Project/
 │       ├── emailValidator.js
 │       └── passwordValidator.js
 └── ...
+</pre>
 
 
 ## Scripts
