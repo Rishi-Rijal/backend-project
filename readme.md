@@ -23,10 +23,12 @@
    git clone https://github.com/Rishi-Rijal/02Project.git
    ```
 
-2.Navigate to the project directory:
-cd 02Project
+2. Navigate to the project directory:
+   ```bash
+   cd 02Project
+```
 
-3.Install dependencies:
+3. Install dependencies:
 ```bash
     npm install
 ```
