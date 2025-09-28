@@ -156,34 +156,60 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
             process.env.REFRESH_TOKEN_SECRET
         )
         const user = await User.findById(decodedToken?._id)
-    
+
         if (!user) {
             throw new ApiError(401, "Invalid refresh token")
         }
-    
+
         if (incomingRefreshToken !== user?.refreshToken) {
             throw new ApiError(401, "Refresh token is Expired or used");
         }
-    
+
         const options = {
             httpOnly: true,
             secure: true
         }
-    
+
         const { accessToken, newRefreshToken } = await generateAccessAndRefreshToken(user._id)
-    
+
         return res
             .status(200)
             .cookie("accessToken", accessToken, options)
             .cookie("refreshToken", newRefreshToken, options)
             .json(new ApiResponse(200, { accessToken, newRefreshToken }, "Token refreshed successfully"))
     } catch (error) {
-        throw ApiError(400, error?.message|| "invalid refresh token")
+        throw ApiError(400, error?.message || "invalid refresh token")
     }
+})
+
+const changeCurrentPassword = asyncHandler(async (req, res) => {
+    const { oldPassword, newPassword, confPassword } = req.body;
+    if (newPassword !== confPassword) {
+        throw new ApiError(400, "new password and conform password must be same")
+    }
+    const user = await User.findById(req.user._id)
+    const isPasswordCorrect = user.isPasswordCorrect(oldPassword);
+
+    if (!isPasswordCorrect) {
+        throw new ApiError(400, "invalid old password")
+    }
+
+    const { valid, errors } = isValidPassword(newPassword);
+    if (!valid) {
+        throw new ApiError(400, "not suitable new Password", errors)
+    }
+
+    user.password = newPassword
+    await user.save({ validateBeforeSave: false })
+
+    return res
+        .status(200)
+        .json(new ApiResponse(200, {}, "Password changed successfully"))
 })
 export {
     registerUser,
     loginUser,
     logoutUser,
-    refreshAccessToken
+    refreshAccessToken,
+    changeCurrentPassword
 }
